@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                android:hint="Enter Size Of Array"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/etArraySize"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:text="Choose Case"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/tvChooseCase"
+                android:layout_weight="0.08"
+                android:gravity="center"
+
+
+            <RadioButton
+                android:onClick="arrayCase"
+                android:text="Best Case"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbBestCase"
+                android:textSize="20dp"/>
+
+            <RadioButton
+                android:onClick="arrayCase"
+                android:text="Average Case"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbAverageCase"
+                android:textSize="20dp"/>
+
+            <RadioButton
+                android:onClick="arrayCase"
+                android:text="Worst Case"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbWorstCase"
+                android:textSize="20dp"/>
+
+            <Button
+                android:onClick="generateArray"
+                android:text="Generate Array"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnGenerateArray"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/tvResult1"
+                android:layout_weight="0.13"
+                android:textSize="20dp"/>
+
+
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rowCount="7"
+                android:columnCount="2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/gLayout"
+                android:visibility="invisible">
+
+
+
+
+                <Button
+                    android:clickable="true"
+                    android:onClick="complexityBubbleSort"
+                    android:text="Bubble Sort"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnBubbleSort"
+                    android:layout_row="0"
+                    android:layout_column="0"/>
+                <Button
+                    android:clickable="true"
+                    android:onClick="complexityInsertionSort"
+                    android:text="Insertion Sort"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnInsertionSort"
+                    android:layout_row="1"
+                    android:layout_column="0"/>
+                <Button
+                    android:clickable="true"
+                    android:onClick="complexitySelectionSort"
+                    android:text="Selection Sort"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnSelectionSort"
+                    android:layout_row="2"
+                    android:layout_column="0"/>
+                <Button
+                    android:clickable="true"
+                    android:onClick="complexityQuickSort"
+                    android:text="Quick Sort"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnQuickSort"
+                    android:layout_row="3"
+                    android:layout_column="0"/>
+                <Button
+                    android:clickable="true"
+                    android:onClick="complexityMergeSort"
+                    android:text="Merge Sort"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnMergeSort"
+                    android:layout_row="4"
+                    android:layout_column="0"/>
+                <Button
+                    android:clickable="true"
+                    android:onClick="complexityHeapSort"
+                    android:text="Heap Sort"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnHeapSort"
+                    android:layout_row="5"
+                    android:layout_column="0"/>
+                <Button
+                    android:clickable="true"
+                    android:onClick="benchmarkAll"
+                    android:text="Benchmark All"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnBenchmarkAll"
+                    android:layout_row="6"
+                    android:layout_column="0"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvInsertionSort"
+                    android:layout_row="1"
+                    android:layout_column="1" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSelectionSort"
+                    android:layout_row="2"
+                    android:layout_column="1"/>
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvQuickSort"
+                    android:layout_row="3"
+                    android:layout_column="1"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvMergeSort"
+                    android:layout_row="4"
+                    android:layout_column="1"/>
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvHeapSort"
+                    android:layout_row="5"
+                    android:layout_column="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvBubbleSort"
+                    android:layout_row="0"
+                    android:layout_column="1" />
+
+
+            </GridLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
